@@ -10,7 +10,7 @@ pipeline {
         stage('Hello') {
             steps {
            withVault([configuration: config,vaultSecrets: secrets]){
-echo %NCR%
+		echo %NCR%
                 }
             }
         }
