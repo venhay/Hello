@@ -1,10 +1,17 @@
+def secrets=[[
+            path:'secret/Secret',
+            secretValues:[envVar:'NCR',vaultKey:'Name']
+            ]]
+def config=[vaultCredentialId: 'venhay']
 pipeline {
     agent any
 
     stages {
         stage('Hello') {
             steps {
-                echo 'Hello World, Happy World'
+           withVault([configuration: config,vaultSecrets: secrets]){
+echo %NCR%
+                }
             }
         }
         stage('welcome to NCR'){
