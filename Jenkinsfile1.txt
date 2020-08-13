@@ -1,8 +1,8 @@
 def secrets=[[
             path:'secret/Secret',
-            secretValues:[envVar:'NCR',vaultKey:'Name']
+            secretValues:[[envVar:'NCR',vaultKey:'Name']]
             ]]
-def config=[vaultCredentialId: 'venhay']
+def config=[ vaultCredentialId: 'venhay']
 pipeline {
     agent any
     stages {
