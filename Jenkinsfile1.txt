@@ -5,12 +5,11 @@ def secrets=[[
 def config=[vaultCredentialId: 'venhay']
 pipeline {
     agent any
-
     stages {
         stage('Hello') {
             steps {
                 withVault([configuration: config,vaultSecrets: secrets]){
-		            echo ¨Hello World¨
+                    echo 'hello world'
                 }
             }
         }
