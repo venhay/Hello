@@ -2,7 +2,7 @@ def secrets=[[
             path:'secret/Secret',
             secretValues:[[envVar:'NCR',vaultKey:'Name']]
             ]]
-def config=[ vaultCredentialId: 'credentials']
+def config=[ vaultCredentialId: 'venhay']
 pipeline {
     agent any
     stages {
