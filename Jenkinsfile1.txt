@@ -11,7 +11,6 @@ pipeline {
                 withVault([configuration: config,vaultSecrets: secrets]){
                     echo 'hello world'
                 }
-            }
         }
         stage('welcome to NCR'){
            steps {
