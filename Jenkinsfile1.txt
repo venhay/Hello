@@ -8,8 +8,9 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-            //   withVault([configuration: config,vaultSecrets: secrets]){
+             withVault([configuration: config,vaultSecrets: secrets]){
                     echo 'hello world'
+                }
                 }
         }
         stage('welcome to NCR'){
