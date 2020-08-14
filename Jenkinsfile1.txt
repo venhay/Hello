@@ -1,6 +1,6 @@
 def secrets=[[
-            path:'secret/Secret',
-            secretValues:[[envVar:'NCR',vaultKey:'Name']]
+            path:'secret/prasanth',
+            secretValues:[[envVar:'NCR',vaultKey:'name']]
             ]]
 def config=[ vaultCredentialId: 'venhay']
 pipeline {
